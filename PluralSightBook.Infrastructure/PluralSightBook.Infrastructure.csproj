@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B29C1EF-B9E7-42B8-862A-91BA17EDF1EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PluralSightBook.Infrastructure</RootNamespace>
+    <AssemblyName>PluralSightBook.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Data\aspnet_Applications.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Membership.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Membership_GetPasswordWithFormat_Result.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Membership_GetPassword_Result.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Membership_GetUserByName_Result.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Membership_GetUserByUserId_Result.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Paths.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Profile.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Profile_GetProperties_Result.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Roles.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_SchemaVersions.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_Users.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_UsersInRoles_RemoveUsersFromRoles_Result.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\aspnet_WebEvent_Events.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EfFriendRepository.cs" />
+    <Compile Include="Data\EfQueryUserByEmail.cs" />
+    <Compile Include="Data\Friend.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PSBData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PSBData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PSBData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PSBData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PSBData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_Applications.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_MembershipUsers.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_Profiles.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_Roles.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_Users.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_UsersInRoles.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_WebPartState_Paths.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_WebPartState_Shared.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_aspnet_WebPartState_User.cs">
+      <DependentUpon>PSBData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DebugEmailSender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PluralSightBook.Core\PluralSightBook.Core.csproj">
+      <Project>{b8be9dd0-534d-419b-8641-650ddb1c69dd}</Project>
+      <Name>PluralSightBook.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Data\PSBData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PSBData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\PSBData.edmx.diagram">
+      <DependentUpon>PSBData.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\PSBData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PSBData.Context.cs</LastGenOutput>
+      <DependentUpon>PSBData.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\PSBData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PSBData.edmx</DependentUpon>
+      <LastGenOutput>PSBData.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
